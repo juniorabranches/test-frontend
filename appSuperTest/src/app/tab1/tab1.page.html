@@ -1,0 +1,41 @@
+
+<ion-content padding>
+  <ion-row>
+    <ion-col size="9">
+      <h5 class="h5">Super Comprador</h5>
+      <h3 class="h3">Junior Abranches</h3>
+    </ion-col>
+    <div tyle="text-align: right; padding-top: 10px;">
+        <ion-col size="3">
+            <ion-toggle s color="dark"></ion-toggle>
+          </ion-col>
+    </div>
+
+  </ion-row>
+  <ion-list style="width: 100%" class="no-tab-slide">
+
+    <ion-item [ngStyle]="{'background-color': '#ffffff'}" *ngFor="let item of pedido; let i = index"  [style.borderLeft]="'15px solid' + item.color" routerLink="/details/{{item.id}}" routerDirection="forward">
+      <ion-row>
+        <div style="padding-left: 3px;">
+            <ion-col col-7>
+                <h3 class="h3">Pedido #{{item.id}}</h3>
+                <h5>Pedido Confirmado</h5>
+            </ion-col>
+        </div>
+        <div class="classDiv">
+            <ion-col col-5>
+                <ion-button style="width: 95px" color="success">Iniciar</ion-button>
+                <h5 class="h3small">Entrega em 00:00</h5>
+              </ion-col>
+        </div>
+
+      </ion-row>
+   
+
+    </ion-item>
+
+  </ion-list>
+
+  
+
+</ion-content>
